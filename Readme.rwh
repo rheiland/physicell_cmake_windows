@@ -1,0 +1,42 @@
+
+https://help.github.com/en/articles/syncing-a-fork
+https://help.github.com/en/articles/configuring-a-remote-for-a-fork
+
+
+~/git/physicell_randy_fork$ git fetch upstream
+fatal: 'upstream' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+
+~/git/physicell_randy_fork$ git remote -v
+origin	git@github.com:rheiland/PhysiCell.git (fetch)
+origin	git@github.com:rheiland/PhysiCell.git (push)
+
+~/git/physicell_randy_fork$ git remote add upstream https://github.com/MathCancer/PhysiCell
+
+~/git/physicell_randy_fork$ git remote -v
+origin	git@github.com:rheiland/PhysiCell.git (fetch)
+origin	git@github.com:rheiland/PhysiCell.git (push)
+upstream	https://github.com/MathCancer/PhysiCell (fetch)
+upstream	https://github.com/MathCancer/PhysiCell (push)
+
+~/git/physicell_randy_fork$ 
+
+
+git fetch upstream
+git pull upstream master
+
+
+~/git/physicell_randy_fork$ git pull upstream development
+From https://github.com/MathCancer/PhysiCell
+ * branch            development -> FETCH_HEAD
+Updating 4b39b87..29d55af
+error: Your local changes to the following files would be overwritten by merge:
+	Makefile
+	config/PhysiCell_settings.xml
+Please commit your changes or stash them before you merge.
+Aborting
+~/git/physicell_randy_fork$ rm Makefile config/PhysiCell_settings.xml 

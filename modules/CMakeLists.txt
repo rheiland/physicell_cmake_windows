@@ -1,0 +1,3 @@
+add_library(ModulesFunctions PhysiCell_geometry.cpp PhysiCell_MultiCellDS.cpp PhysiCell_POV.cpp PhysiCell_pugixml.cpp PhysiCell_settings.cpp PhysiCell_various_outputs.cpp PhysiCell_SVG.cpp PhysiCell_pathology.cpp )
+
+target_link_libraries(ModulesFunctions PUBLIC proj::VectorFunctions)

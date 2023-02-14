@@ -1,0 +1,7 @@
+add_library(CoreFunctions PhysiCell_cell.cpp PhysiCell_phenotype.cpp PhysiCell_cell_container.cpp 
+PhysiCell_standard_models.cpp PhysiCell_custom.cpp PhysiCell_utilities.cpp 
+PhysiCell_basic_signaling.cpp PhysiCell_signal_behavior.cpp PhysiCell_constants.cpp)
+
+#PhysiCell_digital_cell_line.cpp
+
+target_link_libraries(CoreFunctions PUBLIC proj::VectorFunctions)
